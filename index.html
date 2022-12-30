@@ -63,7 +63,10 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>A hexo plugin for inserting echarts in your blog.</p>
+        <p>A hexo plugin for inserting echarts in your blog.<br>
+一个在博客中插入 echarts 的插件<span class="bd-box"><h-char class="bd bd-beg"><h-inner>，</h-inner></h-char></span>相比于其他同款插件增加了更多选项<br>
+<strong>Warning: Please try to use the same version of the same type of echarts js on the same page, otherwise unexpected errors may occur!</strong><br>
+<strong>警告<span class="bd-box"><h-char class="bd bd-beg"><h-inner>：</h-inner></h-char></span>请尽量在同一个页面中使用同一个版本的同一个类型的echarts js<span class="bd-box"><h-char class="bd bd-beg"><h-inner>，</h-inner></h-char></span>否则可能会有意想不到的错误发生<span class="bd-box"><h-char class="bd bd-beg"><h-inner>！</h-inner></h-char></span></strong></p>
 <h2 id="install">Install</h2>
 <div class="highlight"><pre class="code"><code>npm install hexo-tag-echarts-new --save
 </code></pre></div>
@@ -102,11 +105,11 @@ can be filled with types <code>simple</code>, <code>common</code>, <code>esm</co
 &#125;
 &#123;% endecharts %&#125;
 </code></pre></div>
-<div id="echarts1691" style="width: 85%;height:400px;margin: 0 auto"></div>
+<div id="echarts8364" style="width: 85%;height:400px;margin: 0 auto"></div>
     <script src="https://unpkg.com/echarts@5.4.1/dist/echarts.min.js"></script>
     <script>
-            var eChartecharts1691 = echarts.init(document.getElementById('echarts1691'));
-            var optionecharts1691 = {
+            var eChartecharts8364 = echarts.init(document.getElementById('echarts8364'));
+            var optionecharts8364 = {
   xAxis: {
     type: 'category',
     data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
@@ -121,7 +124,7 @@ can be filled with types <code>simple</code>, <code>common</code>, <code>esm</co
     }
   ]
 }
-            eChartecharts1691.setOption(optionecharts1691);
+            eChartecharts8364.setOption(optionecharts8364);
     </script>
 <div class="highlight"><pre class="code"><code>&#123;% echarts 500 400 common %&#125;
 &#123;
@@ -172,11 +175,11 @@ can be filled with types <code>simple</code>, <code>common</code>, <code>esm</co
 &#125;
 &#123;% endecharts %&#125;
 </code></pre></div>
-<div id="echarts7590" style="width: 500px;height:400px;margin: 0 auto"></div>
+<div id="echarts6838" style="width: 500px;height:400px;margin: 0 auto"></div>
     <script src="https://unpkg.com/echarts@5.4.1/dist/echarts.common.min.js"></script>
     <script>
-            var eChartecharts7590 = echarts.init(document.getElementById('echarts7590'));
-            var optionecharts7590 = {
+            var eChartecharts6838 = echarts.init(document.getElementById('echarts6838'));
+            var optionecharts6838 = {
   legend: {
     data: ['Altitude (km) vs. temperature (°C)']
   },
@@ -222,9 +225,9 @@ can be filled with types <code>simple</code>, <code>common</code>, <code>esm</co
     }
   ]
 }
-            eChartecharts7590.setOption(optionecharts7590);
+            eChartecharts6838.setOption(optionecharts6838);
     </script>
-<div class="highlight"><pre class="code"><code>&#123;% echarts 500 400 5.4.0 simple %&#125;
+<div class="highlight"><pre class="code"><code>&#123;% echarts 90% 400 %&#125;
 &#123;
   title: &#123;
     text: 'Basic Radar Chart'
@@ -262,11 +265,11 @@ can be filled with types <code>simple</code>, <code>common</code>, <code>esm</co
 &#125;
 &#123;% endecharts %&#125;
 </code></pre></div>
-<div id="echarts2809" style="width: 500px;height:400px;margin: 0 auto"></div>
-    <script src="https://unpkg.com/echarts@5.4.0/dist/echarts.simple.min.js"></script>
+<div id="echarts8288" style="width: 90%;height:400px;margin: 0 auto"></div>
+    <script src="https://unpkg.com/echarts@5.4.1/dist/echarts.min.js"></script>
     <script>
-            var eChartecharts2809 = echarts.init(document.getElementById('echarts2809'));
-            var optionecharts2809 = {
+            var eChartecharts8288 = echarts.init(document.getElementById('echarts8288'));
+            var optionecharts8288 = {
   title: {
     text: 'Basic Radar Chart'
   },
@@ -301,7 +304,7 @@ can be filled with types <code>simple</code>, <code>common</code>, <code>esm</co
     }
   ]
 }
-            eChartecharts2809.setOption(optionecharts2809);
+            eChartecharts8288.setOption(optionecharts8288);
     </script>
       
     </div>
