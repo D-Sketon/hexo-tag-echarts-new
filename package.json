@@ -1,0 +1,24 @@
+{
+  "name": "hexo-tag-echarts-new",
+  "version": "1.0.0",
+  "description": "A hexo plugin for inserting echarts in your blog.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/D-Sketon/hexo-tag-echarts-new.git"
+  },
+  "keywords": [
+    "hexo",
+    "plugin",
+    "echarts"
+  ],
+  "author": "d-sketon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/D-Sketon/hexo-tag-echarts-new/issues"
+  },
+  "homepage": "https://github.com/D-Sketon/hexo-tag-echarts-new#readme"
+}
