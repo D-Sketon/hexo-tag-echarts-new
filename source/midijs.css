@@ -26,12 +26,12 @@
 }
 
 .midistop {
-    background: url("/source/midijs_button.png") -64px 0 no-repeat;
+    background: url("./midijs_button.png") -64px 0 no-repeat;
     background-color: rgb(202, 202, 202);
 }
 
 .midiplay {
-    background: url("/source/midijs_button.png") 0 0 no-repeat;
+    background: url("./midijs_button.png") 0 0 no-repeat;
     background-color: rgb(202, 202, 202);
 }
 .midibutton {

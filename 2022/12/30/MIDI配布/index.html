@@ -81,13 +81,13 @@ Because midijs cannot play multiple MIDI files at the same time, hexo-">
 <h2 id="example">Example</h2>
 
     <div style="min-height: 32px;display: flex;justify-content: center;align-items: center;width:85%">
-        <div id="stopmidijs9081" class="midibutton midistop"></div>
-        <div id="playmidijs9081" class="midibutton midiplay"></div>
-        <div class="miditime" id="startTimemidijs9081">00:00</div>
-        <div id="linemidijs9081" class="midiline">
-            <div id="ballmidijs9081" class="midiball"></div>
+        <div id="stopmidijs382" class="midibutton midistop"></div>
+        <div id="playmidijs382" class="midibutton midiplay"></div>
+        <div class="miditime" id="startTimemidijs382">00:00</div>
+        <div id="linemidijs382" class="midiline">
+            <div id="ballmidijs382" class="midiball"></div>
         </div>
-    <div class="miditime" id="durationmidijs9081">00:00</div>
+    <div class="miditime" id="durationmidijs382">00:00</div>
     </div>
     <script>
         function prefixAdd(num, length) {
@@ -97,77 +97,77 @@ Because midijs cannot play multiple MIDI files at the same time, hexo-">
             return prefixAdd(parseInt(sec / 60), 2) + ":" + prefixAdd(parseInt(sec % 60), 2);
         }
 
-        function callbackmidijs9081(event) {
-            if (event.time - current_secondmidijs9081 >= 1) {
-                current_secondmidijs9081 = event.time;
-                startTimemidijs9081.innerHTML = sec2min(event.time);
-                ballmidijs9081.style.left = event.time / duration_secondmidijs9081 * document.getElementById("linemidijs9081").offsetWidth - 7.5 + 'px';
+        function callbackmidijs382(event) {
+            if (event.time - current_secondmidijs382 >= 1) {
+                current_secondmidijs382 = event.time;
+                startTimemidijs382.innerHTML = sec2min(event.time);
+                ballmidijs382.style.left = event.time / duration_secondmidijs382 * document.getElementById("linemidijs382").offsetWidth - 7.5 + 'px';
             }
         }
         var isWork = MIDIjs.get_audio_status().match(/WebAudio/);;
-        var urlmidijs9081 = 'https://d-sketon.top/midi/Smoking_Dragon.mid';
-        var duration_secondmidijs9081 = 0;
-        var current_secondmidijs9081 = -1;
-        var isFirstmidijs9081 = true;
-        var isPlaymidijs9081 = false;
+        var urlmidijs382 = 'https://d-sketon.top/midi/Smoking_Dragon.mid';
+        var duration_secondmidijs382 = 0;
+        var current_secondmidijs382 = -1;
+        var isFirstmidijs382 = true;
+        var isPlaymidijs382 = false;
         var currentPlayId = "";
-        var ballmidijs9081 = document.getElementById("ballmidijs9081");
-        var startTimemidijs9081 = document.getElementById("startTimemidijs9081");
-        var playmidijs9081 = document.getElementById("playmidijs9081");
+        var ballmidijs382 = document.getElementById("ballmidijs382");
+        var startTimemidijs382 = document.getElementById("startTimemidijs382");
+        var playmidijs382 = document.getElementById("playmidijs382");
         setTimeout(() => {
-        playmidijs9081.onclick = isWork ? function () {
-            if (isFirstmidijs9081) {
+        playmidijs382.onclick = isWork ? function () {
+            if (isFirstmidijs382) {
                 //get_duration
-                MIDIjs.get_duration(urlmidijs9081, function (seconds) {
-                    duration_secondmidijs9081 = seconds;
-                    document.getElementById("durationmidijs9081").innerHTML = sec2min(seconds);
+                MIDIjs.get_duration(urlmidijs382, function (seconds) {
+                    duration_secondmidijs382 = seconds;
+                    document.getElementById("durationmidijs382").innerHTML = sec2min(seconds);
                 });
 
-                MIDIjs.play(urlmidijs9081);
-                isFirstmidijs9081 = false;
-                isPlaymidijs9081 = true;
-                currentPlayId = 'midijs9081';
-                playmidijs9081.style.background = 'url("/source/midijs_button.png") -32px 0 no-repeat';
-                playmidijs9081.style.backgroundColor = 'rgb(202, 202, 202)';
+                MIDIjs.play(urlmidijs382);
+                isFirstmidijs382 = false;
+                isPlaymidijs382 = true;
+                currentPlayId = 'midijs382';
+                playmidijs382.style.background = 'url("/source/midijs_button.png") -32px 0 no-repeat';
+                playmidijs382.style.backgroundColor = 'rgb(202, 202, 202)';
                 
                 MIDIjs.player_callback = function(event) {
-                    callbackmidijs9081(event);
+                    callbackmidijs382(event);
                 }
             } else {
-                if (isPlaymidijs9081) {
+                if (isPlaymidijs382) {
                     MIDIjs.pause();
-                    isPlaymidijs9081 = false;
-                    playmidijs9081.style.background = 'url("/source/midijs_button.png") 0 0 no-repeat';
-                    playmidijs9081.style.backgroundColor = 'rgb(202, 202, 202)';
+                    isPlaymidijs382 = false;
+                    playmidijs382.style.background = 'url("/source/midijs_button.png") 0 0 no-repeat';
+                    playmidijs382.style.backgroundColor = 'rgb(202, 202, 202)';
                 } else {
-                    if(currentPlayId!='midijs9081') {
-                        ballmidijs9081.style.left = "-7.5px";
-                        startTimemidijs9081.innerHTML = "00:00";
-                        MIDIjs.play(urlmidijs9081);
-                        currentPlayId = 'midijs9081';
+                    if(currentPlayId!='midijs382') {
+                        ballmidijs382.style.left = "-7.5px";
+                        startTimemidijs382.innerHTML = "00:00";
+                        MIDIjs.play(urlmidijs382);
+                        currentPlayId = 'midijs382';
                     } else {
                         MIDIjs.resume();
                     }
-                    isPlaymidijs9081 = true;
-                    playmidijs9081.style.background = 'url("/source/midijs_button.png") -32px 0 no-repeat';
-                    playmidijs9081.style.backgroundColor = 'rgb(202, 202, 202)';
+                    isPlaymidijs382 = true;
+                    playmidijs382.style.background = 'url("/source/midijs_button.png") -32px 0 no-repeat';
+                    playmidijs382.style.backgroundColor = 'rgb(202, 202, 202)';
 
                     MIDIjs.player_callback = function(event) {
-                        callbackmidijs9081(event);
+                        callbackmidijs382(event);
                     }
                 }
             }
         } : null;
-        document.getElementById("stopmidijs9081").onclick = function () {
+        document.getElementById("stopmidijs382").onclick = function () {
             MIDIjs.stop();
-            ballmidijs9081.style.left = "-7.5px";
-            startTimemidijs9081.innerHTML = "00:00";
-            playmidijs9081.style.background = 'url("/source/midijs_button.png") 0 0 no-repeat';
-            playmidijs9081.style.backgroundColor = 'rgb(202, 202, 202)';
-            isFirstmidijs9081 = true;
-            isPlaymidijs9081 = false;
-            current_secondmidijs9081 = -1;
-            currentPlayId = 'midijs9081';
+            ballmidijs382.style.left = "-7.5px";
+            startTimemidijs382.innerHTML = "00:00";
+            playmidijs382.style.background = 'url("/source/midijs_button.png") 0 0 no-repeat';
+            playmidijs382.style.backgroundColor = 'rgb(202, 202, 202)';
+            isFirstmidijs382 = true;
+            isPlaymidijs382 = false;
+            current_secondmidijs382 = -1;
+            currentPlayId = 'midijs382';
         }
         }, 500);
     </script>
