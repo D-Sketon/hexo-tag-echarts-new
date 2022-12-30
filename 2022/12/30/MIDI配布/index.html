@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head><!-- hexo injector head_begin start -->
+<link rel="stylesheet" href="/hexo-midijs/source/midijs.css">
+
+<script src="https://www.midijs.net/lib/midi.js"></script>
+<!-- hexo injector head_begin end -->
+  <meta charset="utf-8">
+  
+  
+  <title>hexo-midijs demo | hexo-midijs demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta name="description" content="A hexo plugin to play MIDI files by MIDIjs.
+About midijs http://www.midijs.net/
+Because midijs cannot play multiple MIDI files at the same time, hexo-">
+  
+  
+  
+  <link rel="stylesheet" href="../../../../css/style.css">
+  
+    <link rel="stylesheet" href="../../../../fancybox/jquery.fancybox-1.3.4.css">
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <div id="nav-outer">
+  <nav id="main-nav" class="outer">
+    <a id="main-nav-toggle" class="nav-icon"></a>
+    
+      <a class="main-nav-link" href="/hexo-midijs/">Home</a>
+    
+      <a class="main-nav-link" href="/hexo-midijs/archives">Archives</a>
+    
+    <div class="main-nav-space-between"></div>
+    
+  </nav>
+</div>
+<div id="header-title">
+  <h1 id="logo-wrap">
+    <a href="/hexo-midijs/" id="logo">hexo-midijs demo</a>
+  </h1>
+  
+</div>
+
+      <div id="content" class="outer">
+        <section id="main"><article id="post-MIDI配布" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/hexo-midijs/2022/12/30/MIDI%E9%85%8D%E5%B8%83/" class="article-date">
+  <time class="dt-published" datetime="2022-12-30T02:00:00.000Z" itemprop="datePublished">2022-12-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      hexo-midijs demo
+    </h1>
+  
+
+      </header>
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>A hexo plugin to play MIDI files by MIDIjs.</p>
+<p>About midijs <a target="_blank" rel="noopener" href="http://www.midijs.net/">http://www.midijs.net/</a></p>
+<p>Because midijs cannot play multiple MIDI files at the same time, hexo-midijs may have many bugs.</p>
+<h2 id="install">Install</h2>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-midijs --save</span><br></pre></td></tr></table></figure>
+<h2 id="usage">Usage</h2>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;% midijs &#x27;./Smoking Dragon.mid&#x27; &#x27;400px&#x27; %&#125;</span><br><span class="line">&#123;% endmidijs %&#125;</span><br></pre></td></tr></table></figure>
+<p>The first parameter represents the url of the MIDI file (required)</p>
+<p>The second parameter represents the width of the player (optional,default 85%)</p>
+<h2 id="example">Example</h2>
+
+    <div style="min-height: 32px;display: flex;justify-content: center;align-items: center;width:85%">
+        <div id="stopmidijs9081" class="midibutton midistop"></div>
+        <div id="playmidijs9081" class="midibutton midiplay"></div>
+        <div class="miditime" id="startTimemidijs9081">00:00</div>
+        <div id="linemidijs9081" class="midiline">
+            <div id="ballmidijs9081" class="midiball"></div>
+        </div>
+    <div class="miditime" id="durationmidijs9081">00:00</div>
+    </div>
+    <script>
+        function prefixAdd(num, length) {
+            return (Array(length).join('0') + num).slice(-length);
+        }
+        function sec2min(sec) {
+            return prefixAdd(parseInt(sec / 60), 2) + ":" + prefixAdd(parseInt(sec % 60), 2);
+        }
+
+        function callbackmidijs9081(event) {
+            if (event.time - current_secondmidijs9081 >= 1) {
+                current_secondmidijs9081 = event.time;
+                startTimemidijs9081.innerHTML = sec2min(event.time);
+                ballmidijs9081.style.left = event.time / duration_secondmidijs9081 * document.getElementById("linemidijs9081").offsetWidth - 7.5 + 'px';
+            }
+        }
+        var isWork = MIDIjs.get_audio_status().match(/WebAudio/);;
+        var urlmidijs9081 = 'https://d-sketon.top/midi/Smoking_Dragon.mid';
+        var duration_secondmidijs9081 = 0;
+        var current_secondmidijs9081 = -1;
+        var isFirstmidijs9081 = true;
+        var isPlaymidijs9081 = false;
+        var currentPlayId = "";
+        var ballmidijs9081 = document.getElementById("ballmidijs9081");
+        var startTimemidijs9081 = document.getElementById("startTimemidijs9081");
+        var playmidijs9081 = document.getElementById("playmidijs9081");
+        setTimeout(() => {
+        playmidijs9081.onclick = isWork ? function () {
+            if (isFirstmidijs9081) {
+                //get_duration
+                MIDIjs.get_duration(urlmidijs9081, function (seconds) {
+                    duration_secondmidijs9081 = seconds;
+                    document.getElementById("durationmidijs9081").innerHTML = sec2min(seconds);
+                });
+
+                MIDIjs.play(urlmidijs9081);
+                isFirstmidijs9081 = false;
+                isPlaymidijs9081 = true;
+                currentPlayId = 'midijs9081';
+                playmidijs9081.style.background = 'url("/source/midijs_button.png") -32px 0 no-repeat';
+                playmidijs9081.style.backgroundColor = 'rgb(202, 202, 202)';
+                
+                MIDIjs.player_callback = function(event) {
+                    callbackmidijs9081(event);
+                }
+            } else {
+                if (isPlaymidijs9081) {
+                    MIDIjs.pause();
+                    isPlaymidijs9081 = false;
+                    playmidijs9081.style.background = 'url("/source/midijs_button.png") 0 0 no-repeat';
+                    playmidijs9081.style.backgroundColor = 'rgb(202, 202, 202)';
+                } else {
+                    if(currentPlayId!='midijs9081') {
+                        ballmidijs9081.style.left = "-7.5px";
+                        startTimemidijs9081.innerHTML = "00:00";
+                        MIDIjs.play(urlmidijs9081);
+                        currentPlayId = 'midijs9081';
+                    } else {
+                        MIDIjs.resume();
+                    }
+                    isPlaymidijs9081 = true;
+                    playmidijs9081.style.background = 'url("/source/midijs_button.png") -32px 0 no-repeat';
+                    playmidijs9081.style.backgroundColor = 'rgb(202, 202, 202)';
+
+                    MIDIjs.player_callback = function(event) {
+                        callbackmidijs9081(event);
+                    }
+                }
+            }
+        } : null;
+        document.getElementById("stopmidijs9081").onclick = function () {
+            MIDIjs.stop();
+            ballmidijs9081.style.left = "-7.5px";
+            startTimemidijs9081.innerHTML = "00:00";
+            playmidijs9081.style.background = 'url("/source/midijs_button.png") 0 0 no-repeat';
+            playmidijs9081.style.backgroundColor = 'rgb(202, 202, 202)';
+            isFirstmidijs9081 = true;
+            isPlaymidijs9081 = false;
+            current_secondmidijs9081 = -1;
+            currentPlayId = 'midijs9081';
+        }
+        }, 500);
+    </script>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+
+</section>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+        All website licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></br>
+      
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/hexo-midijs/" class="mobile-nav-link">Home</a>
+  
+    <a href="/hexo-midijs/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="/hexo-midijs/js/clipboard.min.js"></script>
+<script src="/hexo-midijs/js/jquery-1.4.3.min.js"></script>
+
+<script src="/hexo-midijs/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+
+
+<script src="/hexo-midijs/js/script.js"></script>
+
+
+
+
+
+
+<script>
+  MathJax = {
+    options: {
+      enableMenu: false
+    },
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    }
+  };
+</script>
+<!-- <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+    CommonHTML: {
+      linebreaks: false
+    }
+  });
+  </script> -->
+<script type="text/javascript" id="MathJax-script" async
+  src="/hexo-midijs/mathjax/tex-chtml.js">
+</script>
+<!-- <script type="text/javascript"
+   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS_CHTML">
+</script> -->
+
+
+
+  </div>
+</body>
+</html>
