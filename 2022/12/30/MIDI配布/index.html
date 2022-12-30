@@ -81,13 +81,13 @@ Because midijs cannot play multiple MIDI files at the same time, hexo-">
 <h2 id="example">Example</h2>
 
     <div style="min-height: 32px;display: flex;justify-content: center;align-items: center;width:85%">
-        <div id="stopmidijs5968" class="midibutton midistop"></div>
-        <div id="playmidijs5968" class="midibutton midiplay"></div>
-        <div class="miditime" id="startTimemidijs5968">00:00</div>
-        <div id="linemidijs5968" class="midiline">
-            <div id="ballmidijs5968" class="midiball"></div>
+        <div id="stopmidijs7515" class="midibutton midistop"></div>
+        <div id="playmidijs7515" class="midibutton midiplay"></div>
+        <div class="miditime" id="startTimemidijs7515">00:00</div>
+        <div id="linemidijs7515" class="midiline">
+            <div id="ballmidijs7515" class="midiball"></div>
         </div>
-    <div class="miditime" id="durationmidijs5968">00:00</div>
+    <div class="miditime" id="durationmidijs7515">00:00</div>
     </div>
     <script>
         function prefixAdd(num, length) {
@@ -97,73 +97,73 @@ Because midijs cannot play multiple MIDI files at the same time, hexo-">
             return prefixAdd(parseInt(sec / 60), 2) + ":" + prefixAdd(parseInt(sec % 60), 2);
         }
 
-        function callbackmidijs5968(event) {
-            if (event.time - current_secondmidijs5968 >= 1) {
-                current_secondmidijs5968 = event.time;
-                startTimemidijs5968.innerHTML = sec2min(event.time);
-                ballmidijs5968.style.left = event.time / duration_secondmidijs5968 * document.getElementById("linemidijs5968").offsetWidth - 7.5 + 'px';
+        function callbackmidijs7515(event) {
+            if (event.time - current_secondmidijs7515 >= 1) {
+                current_secondmidijs7515 = event.time;
+                startTimemidijs7515.innerHTML = sec2min(event.time);
+                ballmidijs7515.style.left = event.time / duration_secondmidijs7515 * document.getElementById("linemidijs7515").offsetWidth - 7.5 + 'px';
             }
         }
         var isWork = MIDIjs.get_audio_status().match(/WebAudio/);;
-        var urlmidijs5968 = 'https://d-sketon.top/midi/Smoking_Dragon.mid';
-        var duration_secondmidijs5968 = 0;
-        var current_secondmidijs5968 = -1;
-        var isFirstmidijs5968 = true;
-        var isPlaymidijs5968 = false;
+        var urlmidijs7515 = 'https://d-sketon.top/midi/Smoking_Dragon.mid';
+        var duration_secondmidijs7515 = 0;
+        var current_secondmidijs7515 = -1;
+        var isFirstmidijs7515 = true;
+        var isPlaymidijs7515 = false;
         var currentPlayId = "";
-        var ballmidijs5968 = document.getElementById("ballmidijs5968");
-        var startTimemidijs5968 = document.getElementById("startTimemidijs5968");
-        var playmidijs5968 = document.getElementById("playmidijs5968");
+        var ballmidijs7515 = document.getElementById("ballmidijs7515");
+        var startTimemidijs7515 = document.getElementById("startTimemidijs7515");
+        var playmidijs7515 = document.getElementById("playmidijs7515");
         setTimeout(() => {
-        playmidijs5968.onclick = isWork ? function () {
-            if (isFirstmidijs5968) {
+        playmidijs7515.onclick = isWork ? function () {
+            if (isFirstmidijs7515) {
                 //get_duration
-                MIDIjs.get_duration(urlmidijs5968, function (seconds) {
-                    duration_secondmidijs5968 = seconds;
-                    document.getElementById("durationmidijs5968").innerHTML = sec2min(seconds);
+                MIDIjs.get_duration(urlmidijs7515, function (seconds) {
+                    duration_secondmidijs7515 = seconds;
+                    document.getElementById("durationmidijs7515").innerHTML = sec2min(seconds);
                 });
 
-                MIDIjs.play(urlmidijs5968);
-                isFirstmidijs5968 = false;
-                isPlaymidijs5968 = true;
-                currentPlayId = 'midijs5968';
-                playmidijs5968.className = "midibutton midipause";
+                MIDIjs.play(urlmidijs7515);
+                isFirstmidijs7515 = false;
+                isPlaymidijs7515 = true;
+                currentPlayId = 'midijs7515';
+                playmidijs7515.className = "midibutton midipause";
                 
                 MIDIjs.player_callback = function(event) {
-                    callbackmidijs5968(event);
+                    callbackmidijs7515(event);
                 }
             } else {
-                if (isPlaymidijs5968) {
+                if (isPlaymidijs7515) {
                     MIDIjs.pause();
-                    isPlaymidijs5968 = false;
-                    playmidijs5968.className = "midibutton midiplay";
+                    isPlaymidijs7515 = false;
+                    playmidijs7515.className = "midibutton midiplay";
                 } else {
-                    if(currentPlayId!='midijs5968') {
-                        ballmidijs5968.style.left = "-7.5px";
-                        startTimemidijs5968.innerHTML = "00:00";
-                        MIDIjs.play(urlmidijs5968);
-                        currentPlayId = 'midijs5968';
+                    if(currentPlayId!='midijs7515') {
+                        ballmidijs7515.style.left = "-7.5px";
+                        startTimemidijs7515.innerHTML = "00:00";
+                        MIDIjs.play(urlmidijs7515);
+                        currentPlayId = 'midijs7515';
                     } else {
                         MIDIjs.resume();
                     }
-                    isPlaymidijs5968 = true;
-                    playmidijs5968.className = "midibutton midipause";
+                    isPlaymidijs7515 = true;
+                    playmidijs7515.className = "midibutton midipause";
 
                     MIDIjs.player_callback = function(event) {
-                        callbackmidijs5968(event);
+                        callbackmidijs7515(event);
                     }
                 }
             }
         } : null;
-        document.getElementById("stopmidijs5968").onclick = function () {
+        document.getElementById("stopmidijs7515").onclick = function () {
             MIDIjs.stop();
-            ballmidijs5968.style.left = "-7.5px";
-            startTimemidijs5968.innerHTML = "00:00";
-            playmidijs5968.className = "midibutton midiplay";
-            isFirstmidijs5968 = true;
-            isPlaymidijs5968 = false;
-            current_secondmidijs5968 = -1;
-            currentPlayId = 'midijs5968';
+            ballmidijs7515.style.left = "-7.5px";
+            startTimemidijs7515.innerHTML = "00:00";
+            playmidijs7515.className = "midibutton midiplay";
+            isFirstmidijs7515 = true;
+            isPlaymidijs7515 = false;
+            current_secondmidijs7515 = -1;
+            currentPlayId = 'midijs7515';
         }
         }, 500);
     </script>
@@ -177,6 +177,20 @@ Because midijs cannot play multiple MIDI files at the same time, hexo-">
   </div>
   
     
+<nav id="article-nav">
+  
+    <a href="/hexo-midijs/2022/12/30/20221230/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          page
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
   
 </article>
 
