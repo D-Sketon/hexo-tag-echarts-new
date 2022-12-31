@@ -70,14 +70,14 @@ Warning: Please try to use the">
     <div class="e-content article-entry" itemprop="articleBody">
       
         <p>A hexo plugin for inserting echarts in your blog, customised js version and type.<br>
-一个在博客中插入 echarts 的插件<span class="bd-box"><h-char class="bd bd-beg"><h-inner>，</h-inner></h-char></span>相比于其他同款插件增加了更多选项<br>
-<strong>Warning: Please try to use the same version of the same type of echarts js on the same page, otherwise unexpected errors may occur!</strong><br>
+一个在博客中插入 echarts 的插件<span class="bd-box"><h-char class="bd bd-beg"><h-inner>，</h-inner></h-char></span>相比于其他同款插件增加了更多选项</p>
+<p><strong>Warning: Please try to use the same version of the same type of echarts js on the same page, otherwise unexpected errors may occur!</strong><br>
 <strong>警告<span class="bd-box"><h-char class="bd bd-beg"><h-inner>：</h-inner></h-char></span>请尽量在同一个页面中使用同一个版本的同一个类型的echarts js<span class="bd-box"><h-char class="bd bd-beg"><h-inner>，</h-inner></h-char></span>否则可能会有意想不到的错误发生<span class="bd-box"><h-char class="bd bd-beg"><h-inner>！</h-inner></h-char></span></strong></p>
 <h2 id="install">Install</h2>
 <div class="highlight"><pre class="code"><code>npm install hexo-tag-echarts-new --save
 </code></pre></div>
 <h2 id="usage">Usage</h2>
-<div class="highlight"><pre class="code"><code><span class="hljs-comment">&#123;% echarts 85% 400 5.4.0 common %&#125;
+<div class="highlight"><pre class="code"><code><span class="hljs-comment">&#123;% echarts 85% 400 5.4.0 simple %&#125;
 // echarts options
 &#123;% endecharts %&#125;</span>
 </code></pre></div>
@@ -114,11 +114,11 @@ can be filled with types <code>simple</code>, representing <code>echarts.simple.
 &#125;
 &#123;% endecharts %&#125;
 </code></pre></div>
-<div id="echarts1495" style="width: 85%;height:400px;margin: 0 auto"></div>
+<div id="echarts8136" style="width: 85%;height:400px;margin: 0 auto"></div>
     <script src="https://unpkg.com/echarts@5.4.1/dist/echarts.min.js"></script>
     <script>
-            var eChartecharts1495 = echarts.init(document.getElementById('echarts1495'));
-            var optionecharts1495 = {
+            var eChartecharts8136 = echarts.init(document.getElementById('echarts8136'));
+            var optionecharts8136 = {
   xAxis: {
     type: 'category',
     data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
@@ -133,7 +133,7 @@ can be filled with types <code>simple</code>, representing <code>echarts.simple.
     }
   ]
 }
-            eChartecharts1495.setOption(optionecharts1495);
+            eChartecharts8136.setOption(optionecharts8136);
     </script>
 <div class="highlight"><pre class="code"><code>&#123;% echarts 500 400 simple %&#125;
 &#123;
@@ -184,11 +184,11 @@ can be filled with types <code>simple</code>, representing <code>echarts.simple.
 &#125;
 &#123;% endecharts %&#125;
 </code></pre></div>
-<div id="echarts8696" style="width: 500px;height:400px;margin: 0 auto"></div>
+<div id="echarts973" style="width: 500px;height:400px;margin: 0 auto"></div>
     <script src="https://unpkg.com/echarts@5.4.1/dist/echarts.simple.min.js"></script>
     <script>
-            var eChartecharts8696 = echarts.init(document.getElementById('echarts8696'));
-            var optionecharts8696 = {
+            var eChartecharts973 = echarts.init(document.getElementById('echarts973'));
+            var optionecharts973 = {
   legend: {
     data: ['Altitude (km) vs. temperature (°C)']
   },
@@ -234,7 +234,7 @@ can be filled with types <code>simple</code>, representing <code>echarts.simple.
     }
   ]
 }
-            eChartecharts8696.setOption(optionecharts8696);
+            eChartecharts973.setOption(optionecharts973);
     </script>
 <div class="highlight"><pre class="code"><code>&#123;% echarts 90% 400 %&#125;
 &#123;
@@ -274,11 +274,11 @@ can be filled with types <code>simple</code>, representing <code>echarts.simple.
 &#125;
 &#123;% endecharts %&#125;
 </code></pre></div>
-<div id="echarts3656" style="width: 90%;height:400px;margin: 0 auto"></div>
+<div id="echarts7497" style="width: 90%;height:400px;margin: 0 auto"></div>
     <script src="https://unpkg.com/echarts@5.4.1/dist/echarts.min.js"></script>
     <script>
-            var eChartecharts3656 = echarts.init(document.getElementById('echarts3656'));
-            var optionecharts3656 = {
+            var eChartecharts7497 = echarts.init(document.getElementById('echarts7497'));
+            var optionecharts7497 = {
   title: {
     text: 'Basic Radar Chart'
   },
@@ -313,7 +313,7 @@ can be filled with types <code>simple</code>, representing <code>echarts.simple.
     }
   ]
 }
-            eChartecharts3656.setOption(optionecharts3656);
+            eChartecharts7497.setOption(optionecharts7497);
     </script>
       
     </div>
