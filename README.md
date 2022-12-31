@@ -1,5 +1,7 @@
 # hexo-tag-echarts-new
 
+![](https://img.shields.io/npm/v/hexo-tag-echarts-new)   ![](https://img.shields.io/npm/dt/hexo-tag-echarts-new)
+
 A hexo plugin for inserting echarts in your blog.  
 一个在博客中插入 echarts 的插件，相比于其他同款插件增加了更多选项  
 **Warning: Please try to use the same version of the same type of echarts js on the same page, otherwise unexpected errors may occur!**  
