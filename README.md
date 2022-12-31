@@ -30,9 +30,9 @@ The 3rd parameter represents the version of the echarts (optional, default 5.4.1
 第三个参数代表图表的版本，选填，默认5.4.1  
 
 The 4th parameter represents the type of the echarts js (optional, not filled by default, representing `echarts.min.js`)  
-can be filled with types `simple`, `common`, `esm`, representing `echarts.simple.min.js`, `echarts.common.min.js`, `echarts.esm.min.js` respectively  
+can be filled with types `simple`, representing `echarts.simple.min.js`  
 第四个参数代表图表js的类型，选填，默认不填，即为 `echarts.min.js`  
-可填类型 `simple`，`common`，`esm` ，分别代表 `echarts.simple.min.js`，`echarts.common.min.js`，`echarts.esm.min.js`  
+可填类型 `simple`，代表 `echarts.simple.min.js`  
 
 `tag` 内部填入图表的 `option` 对象  
   
