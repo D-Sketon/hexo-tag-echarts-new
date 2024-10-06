@@ -102,6 +102,13 @@ will generate something like:
     ],
   };
   eChart2562.setOption(option2562);
+  if (window.eChart2562ResizeHandler) {
+    window.removeEventListener("resize", eChart2562ResizeHandler);
+  }
+  var eCharttestResizeHandler = function() {
+    eChart2562.resize();
+  };
+  window.addEventListener("resize", eChart2562ResizeHandler);
 </script>
 ```
 

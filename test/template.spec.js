@@ -20,6 +20,13 @@ describe("template", () => {
   var eCharttest = echarts.init(document.getElementById('test'));
   var optiontest = {};
   eCharttest.setOption(optiontest);
+  if (window.eCharttestResizeHandler) {
+    window.removeEventListener("resize", eCharttestResizeHandler);
+  }
+  var eCharttestResizeHandler = function() {
+    eCharttest.resize();
+  };
+  window.addEventListener("resize", eCharttestResizeHandler);
 </script>`);
   });
 
@@ -40,6 +47,13 @@ describe("template", () => {
   var eCharttest = echarts.init(document.getElementById('test'));
   var optiontest = {};
   eCharttest.setOption(optiontest);
+  if (window.eCharttestResizeHandler) {
+    window.removeEventListener("resize", eCharttestResizeHandler);
+  }
+  var eCharttestResizeHandler = function() {
+    eCharttest.resize();
+  };
+  window.addEventListener("resize", eCharttestResizeHandler);
 </script>`);
   });
 
@@ -60,6 +74,13 @@ describe("template", () => {
   var eCharttest = echarts.init(document.getElementById('test'));
   var optiontest = {};
   eCharttest.setOption(optiontest);
+  if (window.eCharttestResizeHandler) {
+    window.removeEventListener("resize", eCharttestResizeHandler);
+  }
+  var eCharttestResizeHandler = function() {
+    eCharttest.resize();
+  };
+  window.addEventListener("resize", eCharttestResizeHandler);
 </script>`);
   });
 
@@ -80,6 +101,13 @@ describe("template", () => {
   var eCharttest = echarts.init(document.getElementById('test'));
   var optiontest = {a: 1};
   eCharttest.setOption(optiontest);
+  if (window.eCharttestResizeHandler) {
+    window.removeEventListener("resize", eCharttestResizeHandler);
+  }
+  var eCharttestResizeHandler = function() {
+    eCharttest.resize();
+  };
+  window.addEventListener("resize", eCharttestResizeHandler);
 </script>`);
   });
 });
