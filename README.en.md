@@ -1,12 +1,3 @@
-# hexo-tag-echarts-new
-
-![](https://img.shields.io/npm/v/hexo-tag-echarts-new) ![](https://img.shields.io/npm/dt/hexo-tag-echarts-new)
-
-A hexo plugin for inserting echarts in your blog, customised js version and type.  
-一个在博客中插入 echarts 的插件，相比于其他同款插件增加了更多选项  
-**WARNING: Please try to use the same version of the same type of echarts js on the same page, otherwise unexpected errors may occur!**  
-**警告：请尽量在同一个页面中使用同一个版本的同一个类型的 echarts js，否则可能会有意想不到的错误发生！**
-
 <div align = center>
   <h1>hexo-tag-echarts-new</h1>
   <img alt="NPM License" src="https://img.shields.io/npm/l/hexo-tag-echarts-new">
@@ -32,14 +23,14 @@ npm install hexo-tag-echarts-new --save
 ## Usage
 
 ```
-{% echarts width height [version] [type] %}
+{% echarts width height [version] [type] [...other args] %}
 echarts options
 {% endecharts %}
 ```
 
 ### width
 
-The width of the echarts (required)  
+The width of the echarts (required)
 
 ### height
 
@@ -54,6 +45,12 @@ The version of the echarts (optional, default 5.5.1)
 The type of the echarts js (optional, not filled by default, representing `echarts.min.js`)
 
 can be filled with types `simple`, representing `echarts.simple.min.js`
+
+### other args
+
+Other arguments will be attached to the inserted `script` tag. For example, you can insert `data-pjax` and other attributes
+
+### echarts options
 
 Fill in the `option` object of the chart inside the `tag`,
 

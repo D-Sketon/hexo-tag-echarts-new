@@ -4,7 +4,7 @@
   "description": "A hexo plugin for inserting echarts in your blog.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "vitest"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/D-Sketon/hexo-tag-echarts-new/issues"
   },
-  "homepage": "https://github.com/D-Sketon/hexo-tag-echarts-new#readme"
+  "homepage": "https://github.com/D-Sketon/hexo-tag-echarts-new#readme",
+  "devDependencies": {
+    "vitest": "^2.1.2"
+  }
 }

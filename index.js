@@ -1,7 +1,11 @@
 "use strict";
-const echarts = require("./lib/echarts.js");
+const parseArgs = require("./lib/parseArgs.js");
+const template = require("./lib/template.js");
 
-hexo.extend.tag.register("echarts", (args, content) => echarts(args, content), {
-  async: true,
-  ends: true,
-});
+hexo.extend.tag.register(
+  "echarts",
+  (args, content) => template(parseArgs(args, content)),
+  {
+    ends: true,
+  }
+);

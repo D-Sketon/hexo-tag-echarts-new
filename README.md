@@ -23,7 +23,7 @@ npm install hexo-tag-echarts-new --save
 ## 使用
 
 ```
-{% echarts width height [version] [type] %}
+{% echarts width height [version] [type] [...other args] %}
 echarts options
 {% endecharts %}
 ```
@@ -44,6 +44,12 @@ echarts options
 
 图表 js 的类型，选填，默认不填，即为 `echarts.min.js`  
 可填类型 `simple`，代表 `echarts.simple.min.js`
+
+### 其他参数
+
+其他参数将会附加在插入的 `script` 标签上
+
+### echarts options
 
 `tag` 内部填入图表的 `option` 对象
 
