@@ -47,7 +47,7 @@ echarts options
 
 ### 其他参数
 
-其他参数将会附加在插入的 `script` 标签上
+其他参数将会附加在插入的 `script` 标签上。例如，你可以插入 `data-pjax` 等属性
 
 ### echarts options
 
@@ -56,7 +56,7 @@ echarts options
 例如：
 
 ```text
-{% echarts 85% 400 5.4.0 simple %}
+{% echarts 85% 400 5.4.0 simple data-pjax %}
 {
   xAxis: {
     type: 'category',
@@ -73,6 +73,35 @@ echarts options
   ]
 }
 {% endecharts %}
+```
+
+将会生成类似于:
+
+```html
+<div id="echarts2562" style="width: 85%;height:400px;margin: 0 auto"></div>
+<script
+  src="https://unpkg.com/echarts@$5.4.0/dist/echarts.simple.min.js"
+  data-pjax
+></script>
+<script data-pjax>
+  var eChart2562 = echarts.init(document.getElementById("echarts2562"));
+  var option2562 = {
+    xAxis: {
+      type: "category",
+      data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+    },
+    yAxis: {
+      type: "value",
+    },
+    series: [
+      {
+        data: [150, 230, 224, 218, 135, 147, 260],
+        type: "line",
+      },
+    ],
+  };
+  eChart2562.setOption(option2562);
+</script>
 ```
 
 ## 示例

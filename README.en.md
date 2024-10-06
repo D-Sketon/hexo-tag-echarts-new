@@ -76,6 +76,35 @@ e.g.
 {% endecharts %}
 ```
 
+will generate something like:
+
+```html
+<div id="echarts2562" style="width: 85%;height:400px;margin: 0 auto"></div>
+<script
+  src="https://unpkg.com/echarts@$5.4.0/dist/echarts.simple.min.js"
+  data-pjax
+></script>
+<script data-pjax>
+  var eChart2562 = echarts.init(document.getElementById("echarts2562"));
+  var option2562 = {
+    xAxis: {
+      type: "category",
+      data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+    },
+    yAxis: {
+      type: "value",
+    },
+    series: [
+      {
+        data: [150, 230, 224, 218, 135, 147, 260],
+        type: "line",
+      },
+    ],
+  };
+  eChart2562.setOption(option2562);
+</script>
+```
+
 ## Example
 
 [Demo](https://d-sketon.github.io/hexo-tag-echarts-new/2022/12/30/20221230/)

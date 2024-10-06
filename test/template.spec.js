@@ -18,7 +18,7 @@ describe("template", () => {
 <script src="https://unpkg.com/echarts@5.5.1/dist/echarts.min.js" ></script>
 <script >
   var eCharttest = echarts.init(document.getElementById('test'));
-  var optiontest = {}
+  var optiontest = {};
   eCharttest.setOption(optiontest);
 </script>`);
   });
@@ -38,7 +38,7 @@ describe("template", () => {
 <script src="https://unpkg.com/echarts@5.5.1/dist/echarts.simple.min.js" ></script>
 <script >
   var eCharttest = echarts.init(document.getElementById('test'));
-  var optiontest = {}
+  var optiontest = {};
   eCharttest.setOption(optiontest);
 </script>`);
   });
@@ -58,7 +58,7 @@ describe("template", () => {
 <script src="https://unpkg.com/echarts@5.5.1/dist/echarts.min.js" data-foo="bar"></script>
 <script data-foo="bar">
   var eCharttest = echarts.init(document.getElementById('test'));
-  var optiontest = {}
+  var optiontest = {};
   eCharttest.setOption(optiontest);
 </script>`);
   });
@@ -78,7 +78,7 @@ describe("template", () => {
 <script src="https://unpkg.com/echarts@5.5.0/dist/echarts.min.js" ></script>
 <script >
   var eCharttest = echarts.init(document.getElementById('test'));
-  var optiontest = {a: 1}
+  var optiontest = {a: 1};
   eCharttest.setOption(optiontest);
 </script>`);
   });
