@@ -1,9 +1,7 @@
-'use strict';
-const echarts = require('./lib/echarts.js')
+"use strict";
+const echarts = require("./lib/echarts.js");
 
-hexo.extend.tag.register("echarts", (args, content) => {
-    return echarts(args, content);
-}, {
-    async: true,
-    ends: true
+hexo.extend.tag.register("echarts", (args, content) => echarts(args, content), {
+  async: true,
+  ends: true,
 });

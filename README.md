@@ -1,42 +1,54 @@
-# hexo-tag-echarts-new
+<div align = center>
+  <h1>hexo-tag-echarts-new</h1>
+  <img alt="NPM License" src="https://img.shields.io/npm/l/hexo-tag-echarts-new">
+  <img alt="NPM Version" src="https://img.shields.io/npm/v/hexo-tag-echarts-new">
+  <img alt="NPM Downloads" src="https://img.shields.io/npm/dt/hexo-tag-echarts-new">
+  <p align="center">
+  一个在博客中插入 echarts 的插件，相比于其他同款插件增加了更多选项
 
-![](https://img.shields.io/npm/v/hexo-tag-echarts-new)   ![](https://img.shields.io/npm/dt/hexo-tag-echarts-new)
+**警告：请尽量在同一个页面中使用同一个版本的同一个类型的 echarts js，否则可能会有意想不到的错误发生！**
 
-A hexo plugin for inserting echarts in your blog, customised js version and type.  
-一个在博客中插入 echarts 的插件，相比于其他同款插件增加了更多选项  
-**Warning: Please try to use the same version of the same type of echarts js on the same page, otherwise unexpected errors may occur!**  
-**警告：请尽量在同一个页面中使用同一个版本的同一个类型的echarts js，否则可能会有意想不到的错误发生！**  
+  </p>
 
-## Install 
+简体中文 | [English](https://github.com/D-Sketon/hexo-tag-echarts-new/blob/main/README.en.md)
+
+</div>
+
+## 安装
 
 ```bash
 npm install hexo-tag-echarts-new --save
 ```
 
-## Usage
+## 使用
 
 ```
-{% echarts 85% 400 5.4.0 simple %}
-// echarts options
+{% echarts width height [version] [type] %}
+echarts options
 {% endecharts %}
 ```
-The 1st parameter represents the width of the echarts (required)  
-第一个参数代表图表的宽度，必填，可填数字或百分比  
 
-The 2nd parameter represents the height of the echarts (required)  
-第二个参数代表图表的高度，必填，可填数字或百分比  
+### width
 
-The 3rd parameter represents the version of the echarts (optional, default 5.4.1)  
-第三个参数代表图表的版本，选填，默认5.4.1  
+图表的宽度，必填，可填数字或百分比
 
-The 4th parameter represents the type of the echarts js (optional, not filled by default, representing `echarts.min.js`)  
-can be filled with types `simple`, representing `echarts.simple.min.js`  
-第四个参数代表图表js的类型，选填，默认不填，即为 `echarts.min.js`  
-可填类型 `simple`，代表 `echarts.simple.min.js`  
+### height
 
-`tag` 内部填入图表的 `option` 对象  
-  
-e.g.  
+图表的高度，必填，可填数字或百分比
+
+### version
+
+图表的版本，选填，默认 5.5.1
+
+### type
+
+图表 js 的类型，选填，默认不填，即为 `echarts.min.js`  
+可填类型 `simple`，代表 `echarts.simple.min.js`
+
+`tag` 内部填入图表的 `option` 对象
+
+例如：
+
 ```text
 {% echarts 85% 400 5.4.0 simple %}
 {
@@ -56,5 +68,7 @@ e.g.
 }
 {% endecharts %}
 ```
-## Example
+
+## 示例
+
 [Demo](https://d-sketon.github.io/hexo-tag-echarts-new/2022/12/30/20221230/)
