@@ -113,4 +113,4 @@ echarts options
 
 ## 示例
 
-[Demo](https://d-sketon.github.io/hexo-tag-echarts-new/2022/12/30/20221230/)
+[Demo](https://d-sketon.github.io/20241006/hexo-echarts-demo/)
