@@ -17,16 +17,18 @@ describe("template", () => {
 <div id="test" style="width: 50%;height:50%;margin: 0 auto"></div>
 <script src="https://unpkg.com/echarts@5.5.1/dist/echarts.min.js" ></script>
 <script >
-  var eCharttest = echarts.init(document.getElementById('test'));
-  var optiontest = {};
-  eCharttest.setOption(optiontest);
   if (window.eCharttestResizeHandler) {
     window.removeEventListener("resize", eCharttestResizeHandler);
   }
-  var eCharttestResizeHandler = function() {
-    eCharttest.resize();
-  };
-  window.addEventListener("resize", eCharttestResizeHandler);
+  var optiontest = {};
+  if (window.echarts !== undefined) {
+    var eCharttest = echarts.init(document.getElementById('test'));
+    eCharttest.setOption(optiontest);
+    var eCharttestResizeHandler = function() {
+      eCharttest.resize();
+    };
+    window.addEventListener("resize", eCharttestResizeHandler);
+  }
 </script>`);
   });
 
@@ -44,16 +46,18 @@ describe("template", () => {
 <div id="test" style="width: 50%;height:50%;margin: 0 auto"></div>
 <script src="https://unpkg.com/echarts@5.5.1/dist/echarts.simple.min.js" ></script>
 <script >
-  var eCharttest = echarts.init(document.getElementById('test'));
-  var optiontest = {};
-  eCharttest.setOption(optiontest);
   if (window.eCharttestResizeHandler) {
     window.removeEventListener("resize", eCharttestResizeHandler);
   }
-  var eCharttestResizeHandler = function() {
-    eCharttest.resize();
-  };
-  window.addEventListener("resize", eCharttestResizeHandler);
+  var optiontest = {};
+  if (window.echarts !== undefined) {
+    var eCharttest = echarts.init(document.getElementById('test'));
+    eCharttest.setOption(optiontest);
+    var eCharttestResizeHandler = function() {
+      eCharttest.resize();
+    };
+    window.addEventListener("resize", eCharttestResizeHandler);
+  }
 </script>`);
   });
 
@@ -71,16 +75,18 @@ describe("template", () => {
 <div id="test" style="width: 50%;height:50%;margin: 0 auto"></div>
 <script src="https://unpkg.com/echarts@5.5.1/dist/echarts.min.js" data-foo="bar"></script>
 <script data-foo="bar">
-  var eCharttest = echarts.init(document.getElementById('test'));
-  var optiontest = {};
-  eCharttest.setOption(optiontest);
   if (window.eCharttestResizeHandler) {
     window.removeEventListener("resize", eCharttestResizeHandler);
   }
-  var eCharttestResizeHandler = function() {
-    eCharttest.resize();
-  };
-  window.addEventListener("resize", eCharttestResizeHandler);
+  var optiontest = {};
+  if (window.echarts !== undefined) {
+    var eCharttest = echarts.init(document.getElementById('test'));
+    eCharttest.setOption(optiontest);
+    var eCharttestResizeHandler = function() {
+      eCharttest.resize();
+    };
+    window.addEventListener("resize", eCharttestResizeHandler);
+  }
 </script>`);
   });
 
@@ -98,16 +104,18 @@ describe("template", () => {
 <div id="test" style="width: 50%;height:50%;margin: 0 auto"></div>
 <script src="https://unpkg.com/echarts@5.5.0/dist/echarts.min.js" ></script>
 <script >
-  var eCharttest = echarts.init(document.getElementById('test'));
-  var optiontest = {a: 1};
-  eCharttest.setOption(optiontest);
   if (window.eCharttestResizeHandler) {
     window.removeEventListener("resize", eCharttestResizeHandler);
   }
-  var eCharttestResizeHandler = function() {
-    eCharttest.resize();
-  };
-  window.addEventListener("resize", eCharttestResizeHandler);
+  var optiontest = {a: 1};
+  if (window.echarts !== undefined) {
+    var eCharttest = echarts.init(document.getElementById('test'));
+    eCharttest.setOption(optiontest);
+    var eCharttestResizeHandler = function() {
+      eCharttest.resize();
+    };
+    window.addEventListener("resize", eCharttestResizeHandler);
+  }
 </script>`);
   });
 });

@@ -3,7 +3,7 @@ import { describe, it, expect } from "vitest";
 const parseArgs = require("../lib/parseArgs.js");
 
 describe("parseArgs", () => {
-  const defaultVersion = "5.5.1";
+  const defaultVersion = "5.6.0";
 
   it("only width and height", () => {
     const args = ["50%", "50%"];

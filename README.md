@@ -38,7 +38,7 @@ echarts options
 
 ### version
 
-图表的版本，选填，默认 5.5.1
+图表的版本，选填，默认 5.6.0
 
 ### type
 

@@ -38,7 +38,7 @@ The height of the echarts (required)
 
 ### version
 
-The version of the echarts (optional, default 5.5.1)
+The version of the echarts (optional, default 5.6.0)
 
 ### type
 
