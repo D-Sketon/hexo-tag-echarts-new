@@ -80,7 +80,7 @@ echarts options
 ```html
 <div id="echarts2562" style="width: 85%;height:400px;margin: 0 auto"></div>
 <script
-  src="https://unpkg.com/echarts@$5.4.0/dist/echarts.simple.min.js"
+  src="https://unpkg.com/echarts@5.4.0/dist/echarts.simple.min.js"
   data-pjax
 ></script>
 <script data-pjax>
